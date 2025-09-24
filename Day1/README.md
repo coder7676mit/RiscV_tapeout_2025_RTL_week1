@@ -1,1 +1,1 @@
-![come onnn](Images/yosys_syntax.png)
+![come onnn](../IMAGES/yosys_syntax.png)
