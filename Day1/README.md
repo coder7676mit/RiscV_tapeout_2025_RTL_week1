@@ -3,10 +3,7 @@
 
 #  Day 1: Introduction to Verilog RTL Design & Synthesis
 
-Welcome to **Day 1** of the RTL Workshop!  
-Today, you'll embark on your journey into digital design by learning Verilog, open-source simulation with **Icarus Verilog (iverilog)**, and the basics of logic synthesis using **Yosys**. This guide will walk you through practical labs, essential concepts, and insightful explanations to help you build a strong foundation in RTL design.
 
----
 
 ##  Table of Contents
 
@@ -84,7 +81,8 @@ View the waveform:
 gtkwave tb_good_mux.vcd
 ```
 
-![alt text]()
+![alt text](good_mux_terminal.png)
+![gtkwave](good_mux_gtkwave.png)
 
 ## 4. Verilog Code Analysis
 
@@ -174,7 +172,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     show
     ```
 
-![alt text]()
+![alt text](yosys_good_mux_netlist.png)
 
 ---
 
