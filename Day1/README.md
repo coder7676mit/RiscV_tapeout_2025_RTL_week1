@@ -33,19 +33,11 @@ The **design** is your Verilog code describing the intended logic functionality.
 
 A **testbench** is a simulation environment that applies various inputs to your design and checks if the outputs are correct.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757" alt="Design & Testbench Overview" width="70%">
-</div>
 
----
 
 ## 2. Getting Started with iverilog
 
 **iverilog** is an open-source simulator for Verilog. Here’s the typical simulation flow:
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/3ca190fb-cfa4-4abb-b9e1-0151b3c4bdba" alt="iverilog Simulation Flow" width="70%">
-</div>
 
 - Both the design and testbench are provided as input to iverilog.
 - The simulator produces a `.vcd` file for waveform viewing in GTKWave.
@@ -60,10 +52,11 @@ Let’s simulate a simple **2-to-1 multiplexer** using iverilog!
 
 ```shell
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
-cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+cd sky130RTLDesignAndSynthesisWorkshop/
+cd verilog_files
 ```
 
-###  Step 2: Install Required Tools
+###  Step 2: Install required tools (Ignore if done already)
 
 ```shell
 sudo apt install iverilog
@@ -90,11 +83,7 @@ View the waveform:
 gtkwave tb_good_mux.vcd
 ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b" alt="GTKWave Example" width="70%">
-</div>
-
----
+![alt text]()
 
 ## 4. Verilog Code Analysis
 
@@ -115,8 +104,8 @@ endmodule
 ###  **How It Works**
 
 - **Inputs:** `i0`, `i1` (data), `sel` (select line)
-- **Output:** `y` (registered output)
-- **Logic:** If `sel` is 1, `y` gets `i1`; if `sel` is 0, `y` gets `i0`.
+- **Output:** `y` (output)
+- **Logic:** If `sel` is 0, `y` gets `i0`; if `sel` is 1, `y` gets `i1`.
 
 ---
 
@@ -124,7 +113,7 @@ endmodule
 
 ###  What is Yosys?
 
-**Yosys** is a powerful open-source synthesis tool for digital hardware. It takes your Verilog code and converts it into a gate-level netlist—a hardware blueprint.
+**Yosys** is a an open-source synthesis tool for digital hardware. It takes your Verilog code and converts it into a gate-level netlist—a hardware blueprint.
 
 #### Yosys Features
 
@@ -160,7 +149,7 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 2. **Read the liberty library**
     ```shell
-    read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+    read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
 3. **Read the Verilog code**
@@ -183,9 +172,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     show
     ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3" alt="Yosys Gate-level Schematic" width="70%">
-</div>
+![alt text]()
 
 ---
 
