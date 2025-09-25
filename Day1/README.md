@@ -81,7 +81,7 @@ View the waveform:
 gtkwave tb_good_mux.vcd
 ```
 
-![alt text](../IMAGES/good_mux_terminal.png)
+![alt text](../Day1/good_mux_terminal.png)
 ![gtkwave](../IMAGES/good_mux_gtkwave.png)
 
 ## 4. Verilog Code Analysis
