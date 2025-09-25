@@ -22,7 +22,7 @@ Week 1 of the vsd 2025 tapeout program, i.e, RTL design and synthesis using sky1
 - [Day 3: Combinational and Sequential Optimization](Day3/README.md)
 - [Day 4: Gate-Level Simulation (GLS), Blocking vs. Non-Blocking in Verilog, and Synthesis-Simulation Mismatch ](Day4/README.md)
 - [Day 5: Optimization in Synthesis ](Day5/README.md)
-- [ISSUES](../ISSUES!!!!!!!/README.md)
+- [## <b>ISSUES</b>](../ISSUE!!!!!!!/README.md)
 
 Each day’s README includes:
 - Clear explanations of the day’s concepts
