@@ -81,8 +81,8 @@ View the waveform:
 gtkwave tb_good_mux.vcd
 ```
 
-![alt text](good_mux_terminal.png)
-![gtkwave](good_mux_gtkwave.png)
+![alt text](../IMAGES/good_mux_terminal.png)
+![gtkwave](../IMAGES/good_mux_gtkwave.png)
 
 ## 4. Verilog Code Analysis
 
@@ -172,7 +172,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     show
     ```
 
-![alt text](yosys_good_mux_netlist.png)
+![alt text](../IMAGES/yosys_good_mux_netlist.png)
 
 ---
 
