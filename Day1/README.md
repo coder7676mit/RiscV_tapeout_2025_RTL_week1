@@ -1,4 +1,5 @@
-![come onnn](../IMAGES/yosys_syntax.png)
+---
+
 
 #  Day 1: Introduction to Verilog RTL Design & Synthesis
 
@@ -161,6 +162,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     ```shell
     synth -top good_mux
     ```
+![yosys syntax](../IMAGES/yosys_syntax.png)
 
 5. **Technology mapping**
     ```shell
