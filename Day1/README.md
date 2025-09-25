@@ -82,7 +82,7 @@ gtkwave tb_good_mux.vcd
 ```
 
 ![alt text](../Day1/good_mux_terminal.png)
-![gtkwave](../IMAGES/good_mux_gtkwave.png)
+![gtkwave](../Day1/good_mux_gtkwave.png)
 
 ## 4. Verilog Code Analysis
 
@@ -160,7 +160,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     ```shell
     synth -top good_mux
     ```
-![yosys syntax](../IMAGES/yosys_syntax.png)
+![yosys syntax](../Day1/yosys_syntax.png)
 
 5. **Technology mapping**
     ```shell
@@ -172,7 +172,7 @@ Let’s synthesize the `good_mux` design using Yosys!
     show
     ```
 
-![alt text](../IMAGES/yosys_good_mux_netlist.png)
+![alt text](../Day1/yosys_good_mux_netlist.png)
 
 ---
 
