@@ -9,7 +9,7 @@
 
 1. [What is a Simulator, Design, and Testbench?](#1-what-is-a-simulator-design-and-testbench)
 2. [Getting Started with iverilog](#2-getting-started-with-iverilog)
-3. [Lab]: Simulating a 2-to-1 Multiplexer](#3-lab-simulating-a-2-to-1-multiplexer)
+3. [Lab Simulating a 2-to-1 Multiplexer](#3-lab-simulating-a-2-to-1-multiplexer)
 4. [Verilog Code Analysis](#4-verilog-code-analysis)
 5. [Introduction to Yosys & Gate Libraries](#5-introduction-to-yosys--gate-libraries)
 6. [Synthesis Lab with Yosys](#6-synthesis-lab-with-yosys)
