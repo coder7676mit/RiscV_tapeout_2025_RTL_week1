@@ -43,14 +43,12 @@ begin
 .....
 end
 ```
-**_Hardware Implementation_**
-
-<img width="400" alt="hd imp" src="https://user-images.githubusercontent.com/93824690/166259138-8166cfbc-1ae2-4260-87ad-4aca82c56c94.png">
+----
 
 **_Cautions with using IF Statements_**
 Inferred latches can serve as a 'warning sign' that the logic design might not be implemented as intended. They represent a bad coding style, which happens because of incomplete if statements/crucial statements missing in the design. For ex: if a else statement is missing in the logic code, the hardware has not been informed on the decision, and hence it will latch and will tried retain the value. This type of design should be completely avoided unless intended to meet the design functionality (ex: Counter Design).
 
-<img width="400" alt="inf if" src="https://user-images.githubusercontent.com/93824690/166259507-9a71c456-5108-42dc-ad1c-1ebb6e9b0d6f.png">
+----
 
 #### CASE Statements
 The hardware implementation is a Multiplexer. Similar to IF Statements, Case statements are also used inside always block and the variable should be a register variable.
@@ -101,21 +99,17 @@ end
 
 #### * (Case 1) incomplete if statements
 
-**_Verilog File_**
-
-<img width="400" alt="100" src="https://user-images.githubusercontent.com/93824690/166263361-bd07fa49-2177-47a7-96d2-5a23e67e9a30.png">
-
 **_GTK Wave_**
 
-<img width="" alt="Screenshot (250)" src="https://user-images.githubusercontent.com/93824690/166262139-4b40b5d0-55e9-448b-968f-1bc5dbd59c4a.png">
+![alt](Day5/incomp_if_gtk.png)
 
 >_Else case is missing so there will be a D latch._
 
 **_Synthesis Statistics_**																		  
-<img width="400" alt="Screenshot (251)" src="https://user-images.githubusercontent.com/93824690/166262175-01dc3362-8128-43a2-bda4-14be20b26d7d.png">
+![alt](Day5/incomp_if_latch.png)
 
 **_Realization of Logic_**
-<img width="700" alt="Screenshot (252)" src="https://user-images.githubusercontent.com/93824690/166262206-b46f9ea8-6fec-4c6f-a1ce-bae4dafc566a.png">
+![alt](Day5/incomp_if_netl.png)
 
 >_synthesized design has a D Latch inferred due to incomplete if structure (missing else statement)._
 
@@ -127,17 +121,17 @@ end
 
 **_GTK Wave_**
 
-<img width="700" alt="Screenshot (254)" src="https://user-images.githubusercontent.com/93824690/166262258-db09ddf3-47d0-44d3-888c-6b45b56d1cdf.png">
+![alt](Day5/incmp_if2_gtk.png)
 
 >_When i0 is high, the output follows i1. When i0 is low, the output latches to a constant value (when both i0 and i2 are 0). Presence of inferred latches due to incomplete if structure._
 
 **_Synthesis Statistics_**
 
-<img width="400" alt="Screenshot (256)" src="https://user-images.githubusercontent.com/93824690/166262277-2398c16a-7007-4b1e-937d-398989c891f6.png">
+![alt](Day5/incomp_if2_latch.png)
 
 **_Realization of Logic_**
 
-<img width="700" alt="Screenshot (257)" src="https://user-images.githubusercontent.com/93824690/166262309-0c66e904-20fb-49ba-859a-97667ca61996.png">
+![alt](Day5/incomp_if2_netlist.png)
 
 
 ### 5.2 INCOMPLETE CASE STATEMENTS
@@ -148,17 +142,17 @@ end
 <img width="641" alt="33" src="https://user-images.githubusercontent.com/93824690/166265632-97eb0312-e58f-40e6-9f26-fa6b54abb8ca.png">
 
 **_GTK Wave_**
-<img width="700" alt="Screenshot (258)" src="https://user-images.githubusercontent.com/93824690/166264918-dab97bee-102e-43b2-9887-d8d07419b281.png">
+![alt](Day5/incomp_case_gtk.png)
 
 >_When select signal is 00, the output follows i0 and is i1 when the select value is 01. Since the output is undefined for 10 and 11 values, the ouput latches to the previously available value._
 
 **_Synthesis Statistics_**
 
-<img width="400" alt="i st" src="https://user-images.githubusercontent.com/93824690/166266006-0a03e9e8-0fc9-45bf-be6a-b82edbaa6f5c.png">
+![alt](Day5/incomp_case_latch.png)
 
 **_Realization of Logic_**
 
-<img width="750" alt="Screenshot (259)" src="https://user-images.githubusercontent.com/93824690/166264934-397bc9a5-7e18-419c-898b-14d910aeafe5.png">
+![alt](Day5/incomp_case_netlist.png)
 
 >_The synthesized design has a D Latch inferred due to incomplete case structure (missing output definition for 2 of the select statements)._
 
@@ -170,16 +164,16 @@ end
 
 **_Synthesis Statistics_**
 
-<img width="400" alt="comp st" src="https://user-images.githubusercontent.com/93824690/166266812-2ae22097-2241-49a3-8a10-96bab1d0ff09.png">
+![alt](Day5/comp_case_nolatch.png)
 
 **_GTK Wave_**
 
-<img width="700" alt="Screenshot (260)" src="https://user-images.githubusercontent.com/93824690/166264948-65dc25ba-0bdd-4ff2-b6de-8b3616d665f5.png">
+![alt](Day5/comp_case_gtk.png)
 
 >_When select signal is 00, the output follows i0 and is i1 when the select value is 01. Since the output is undefined for 10 and 11 values, the presence of default sets the output to i2 when the select line is 10 or 11. The ouput will not latch and be a proper combinational circuit._
 **_Realization of Logic_**
 
-<img width="750" alt="Screenshot (261)" src="https://user-images.githubusercontent.com/93824690/166264984-ce6f0d0d-473f-409c-9149-f37b5b82234b.png">
+![alt](Day5/comp_case_netlist.png)
 
 #### CASE 3: partial case statement
 **_Verilog File_**
@@ -188,11 +182,11 @@ end
 
 **_Synthesis Statistics_**
 
-<img width="400" alt="p st" src="https://user-images.githubusercontent.com/93824690/166267889-5976618e-4223-470e-b9ad-2a33636b8ba6.png">
+![alt](Day5/partial_case_latch.png)
 
 **_Realization of Logic_**
 
-<img width="781" alt="p re" src="https://user-images.githubusercontent.com/93824690/166267900-ca0787fd-c00b-4a33-96b4-7ea15e5f1c41.png">
+![alt](Day5/partial_case_netlist.png)
 
 
 ### 5.3 STATEMENTS USING FOR
@@ -212,7 +206,15 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-<img width="750" alt="1 gtk" src="https://user-images.githubusercontent.com/93824690/166269945-ad59baba-f1d2-46a5-94e5-f1bbe2c33c57.png">
+![alt](Day5/mux_generate_gtk.png)
+
+**_Synthesis Statistics_**
+
+![alt](Day5/mux_generate_netlist_latch.png)
+
+**_GLS_**
+
+![alt](Day5/mux_generate_gls.png)
 
 #### CASE 2: demux using case statement.v
 
@@ -222,19 +224,8 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-<img width="750" alt="2 gtk" src="https://user-images.githubusercontent.com/93824690/166270133-35d829cf-49c9-4dd3-bb01-f4c6e3ad7c40.png">
+![alt](Day5/demux_case_gtk.png)
 
-**_Synthesis Statistics_**
-
-<img width="400" alt="2 stk" src="https://user-images.githubusercontent.com/93824690/166270162-b0ac5bc1-e795-427c-8ba2-ef292afaa420.png">
-
-**_Realization of Logic_**
-
-<img width="780" alt="2 re" src="https://user-images.githubusercontent.com/93824690/166270182-340652d4-b730-4d3f-aa08-e41d6a3a8657.png">
-
-**_GLS Output_**
-
-<img width="750" alt="2 gls" src="https://user-images.githubusercontent.com/93824690/166270199-ac2a299b-d0c1-43af-90f8-47070c8dcaaf.png">
 
 #### CASE 3: demux using generate if statement.v 
 
@@ -244,19 +235,12 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-<img width="750" alt="3 gtk" src="https://user-images.githubusercontent.com/93824690/166270250-42c21b20-c041-4a00-b594-5152620a00ac.png">
+![alt](Day5/demux_generate_gtk.png)
 
-**_Synthesis Statistics_**
-
-<img width="400" alt="3 st" src="https://user-images.githubusercontent.com/93824690/166270278-9deb11bb-847f-4d8f-9917-3ddddba214e4.png">
-
-**_Realization of Logic_**
-
-<img width="750" alt="3 re" src="https://user-images.githubusercontent.com/93824690/166270294-71548a2e-6f23-49bb-9aa5-a39e7d1bf1d0.png">
 
 **_GLS Output_**
 
-<img width="750" alt="3 gls" src="https://user-images.githubusercontent.com/93824690/166270307-c3b44ff7-47eb-43c3-a2dd-8fd28150234e.png">
+![alt](Day5/demux_generate_gls.png)
 
 
 ### 5.3 STATEMENTS USING GENERATE
@@ -269,21 +253,14 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-<img width="750" alt="1 gtk" src="https://user-images.githubusercontent.com/93824690/166289014-d5cc1b41-f990-48d8-99b0-acf9813e3f45.png">
+![alt](Day5/rca_gtk.png)
 
-**_Synthesis Statistics_**
-
-<img width="400" alt="1 st" src="https://user-images.githubusercontent.com/93824690/166289026-0906729e-2892-436e-b297-b176b97c0fc2.png">
 
 **_Realization of Logic - rca_**
 
-<img width="850" alt="1 re" src="https://user-images.githubusercontent.com/93824690/166289044-113508a0-3f96-4aca-9edf-3f492b0f265d.png">
-
-**_Realization of Logic- fa_**
-
-<img width="850" alt="1 re2" src="https://user-images.githubusercontent.com/93824690/166289066-d06cbd35-015e-4dfb-baf9-138399256918.png">
+![alt](Day5/rca_netlist.png)
 
 **_GLS Output_**
 
-<img width="750" alt="1 gls" src="https://user-images.githubusercontent.com/93824690/166289126-d0980b69-c9d8-4e66-8011-631610d98480.png">
+![alt](Day5/rca_gtk.png)
 
