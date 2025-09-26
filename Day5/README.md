@@ -188,6 +188,20 @@ end
 
 ![alt](Day5/partial_case_netlist.png)
 
+#### CASE 4: Overlapping case
+
+**_GTK Wave_**
+
+![alt](../Day5/bad_mux_gtk.png)
+
+**_Synthesis Output_**
+
+![alt](../Day5/bad_mux_netlist.png)
+
+**_GLS_**
+
+![alt](../Day5/bad_case_gls.png)
+
 
 ### 5.3 STATEMENTS USING FOR
 
@@ -206,15 +220,15 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-![alt](Day5/mux_generate_gtk.png)
+![alt](../Day5/mux_generate_gtk.png)
 
 **_Synthesis Statistics_**
 
-![alt](Day5/mux_generate_netlist_latch.png)
+![alt](../Day5/mux_generate_netlist_latch.png)
 
 **_GLS_**
 
-![alt](Day5/mux_generate_gls.png)
+![alt](../Day5/mux_generate_gls.png)
 
 #### CASE 2: demux using case statement.v
 
@@ -224,7 +238,7 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-![alt](Day5/demux_case_gtk.png)
+![alt](../Day5/demux_case_gtk.png)
 
 
 #### CASE 3: demux using generate if statement.v 
@@ -235,12 +249,12 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-![alt](Day5/demux_generate_gtk.png)
+![alt](../Day5/demux_generate_gtk.png)
 
 
 **_GLS Output_**
 
-![alt](Day5/demux_generate_gls.png)
+![alt](../Day5/demux_generate_gls.png)
 
 
 ### 5.3 STATEMENTS USING GENERATE
@@ -253,14 +267,14 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GTK Wave_**
 
-![alt](Day5/rca_gtk.png)
+![alt](../Day5/rca_gtk.png)
 
 
 **_Realization of Logic - rca_**
 
-![alt](Day5/rca_netlist.png)
+![alt](../Day5/rca_netlist.png)
 
 **_GLS Output_**
 
-![alt](Day5/rca_gtk.png)
+![alt]../(Day5/rca_gtk.png)
 
