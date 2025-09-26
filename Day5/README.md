@@ -101,7 +101,7 @@ end
 
 **_GTK Wave_**
 
-![alt](Day5/incomp_if_gtk.png)
+![alt](../Day5/incomp_if_gtk.png)
 
 >_Else case is missing so there will be a D latch._
 
