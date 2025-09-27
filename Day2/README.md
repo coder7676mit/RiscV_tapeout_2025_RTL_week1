@@ -17,7 +17,7 @@ For a design to work, there are three important parameters that determines how t
 
 #### Various Flavours of AND Cell
 
-![alt](../Day2/gates_decrip.jpeg)
+![alt](../Day2/gates_descrip.jpeg)
 
 ### 2.2. Hierarchial synthesis vs Flat synthesis 
 
