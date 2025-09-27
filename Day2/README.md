@@ -8,20 +8,16 @@ __To shut off the background colors/ syntax off:
 __To enable the line numbers
 : se nu
 ```
-#### Library file
-
-<img width="641" alt="Screenshot (150)" src="https://user-images.githubusercontent.com/93824690/166147361-8f538de7-24d2-410e-81c2-832710298c5a.png">
 
 #### Contents
 
 For a design to work, there are three important parameters that determines how the Silicon works: Process (Variations due to Fabrications), Voltage (Changes in the behavior of the circuit) and Temperature (Sensitivity of semiconductors). Libraries are characterized to model these variations. 
 
-<img width="300" alt="Screenshot (162)" src="https://user-images.githubusercontent.com/93824690/166147849-14fa3eaf-0ca9-440c-bbe8-7b52f6cd682e.png">
+![alt](../Day2/lib_file.jpeg)
 
 #### Various Flavours of AND Cell
 
-<img width="750" alt="Screenshot (163)" src="https://user-images.githubusercontent.com/93824690/166147855-692033f0-08e1-465f-98b6-5a9fba6a3eb0.png">
-
+![alt](../Day2/gates_decrip.jpeg)
 
 ### 2.2. Hierarchial synthesis vs Flat synthesis 
 
@@ -50,13 +46,10 @@ $ !gvim multiple_modules_hier.v
 
 <img width="641" alt="Screenshot (165)" src="https://user-images.githubusercontent.com/93824690/166205646-1597fd0a-12e7-4244-b0a7-875b36e8366b.png">
 
-**Realization of the Logic**
-
-<img width="500" alt="Screen Shot 2021-09-02 at 5 12 46 PM" src="https://user-images.githubusercontent.com/89927660/131923051-5d882430-fa4a-4b0d-8b70-0857c58f9b34.png">
 
 **Netlist file**
 
-<img width="641" alt="Screenshot (168)" src="https://user-images.githubusercontent.com/93824690/166205875-e11616c0-01c5-4aee-a5a8-061646e8bbb7.png">
+![alt](../Day2/hierarchical_synth.png)
 
 #### Flat synthesis  
 
@@ -74,8 +67,7 @@ $ !gvim multiple_modules_flat.v
  
 **Netlist file**
 
-<img width="641" alt="Screenshot (169)" src="https://user-images.githubusercontent.com/93824690/166206713-c95c9f66-34f0-408d-916c-47081c326872.png">
-
+![alt](../Day2/hierar_vs_flatten.png)
 
 #### SUB MODULE LEVEL SYNTHESIS
 
@@ -85,13 +77,10 @@ Sub-module level synthesis is preferred when there are multiple instances of sam
 
 <img width="300" alt="Screen Shot 2021-09-02 at 9 11 28 PM" src="https://user-images.githubusercontent.com/89927660/131940332-d8272cc3-affb-471d-9dd0-1ad951d86c22.png">
 
-**Graphical Realization of the Logic**
-
-<img width="500" alt="Screen Shot 2021-09-02 at 9 12 18 PM" src="https://user-images.githubusercontent.com/89927660/131940277-9fc3e2fe-b185-4d91-9b2d-86e54c1d1768.png">
 
 **NetList File of Sub-module**
 
-<img width="300" alt="Screen Shot 2021-09-02 at 9 13 33 PM" src="https://user-images.githubusercontent.com/89927660/131940384-c0bf6a0a-a73c-4c99-95a4-84a7a654e774.png">
+![alt](../Day2/submod1_netl.png)
 
 
 ### 2.3. Various Flop coding styles and optimization
@@ -139,7 +128,7 @@ $ gtkwave tb_dff_asyncres.vcd
 ```
 **GTK WAVE OF ASYNCHRONOUS RESET**
 
-<img width="750" alt="Screenshot (181)" src="https://user-images.githubusercontent.com/93824690/166207949-1b806556-0aa2-4671-b1a0-2d16b55fbbdc.png">
+![alt](../Day2/async_rst_gtk.png)
 
 #### FLIP FLOP SYNTHESIS
 
@@ -169,15 +158,15 @@ $ !gvim dff_asyncres_ff.v
 
 **Realization of Logic**
 
-<img width="700" alt="Screenshot (187)" src="https://user-images.githubusercontent.com/93824690/166208007-645ed477-f0cf-4af2-a6dc-0c692498d26d.png">
+![alt](../Day2/async_flop.png)
 
 **Statistics of D FLipflop with Asynchronous set**
 
 <img width="400" alt="Screenshot (188)" src="https://user-images.githubusercontent.com/93824690/166207987-427e675c-d2d2-4677-949f-5eb27b18ce03.png">
 
-**Realization of Logic**
+**GTK WAVE OF ASYNCHRONOUS SET**
 
-<img width="700" alt="Screenshot (189)" src="https://user-images.githubusercontent.com/93824690/166208020-8054aabb-5e98-424f-87cb-5ea69d9962ea.png">
+![alt](../Day2/async_set_gtk.png)
 
 **Statistics of D FLipflop with Synchronous Reset**
 
@@ -185,7 +174,8 @@ $ !gvim dff_asyncres_ff.v
 
 **Realization of Logic**
 
-<img width="700" alt="Screenshot (191)" src="https://user-images.githubusercontent.com/93824690/166209147-347c8784-a4e8-44fe-bf08-19c9b9b6e3c6.png">
+![alt](../Day2/sync_flop.png)
+
 
 #### Interesting Optimizations
 ```
@@ -194,7 +184,7 @@ $ gvim mult_*.v -o
 _Invoke Yosys
 $ yosys
 _Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ..lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Read Design
 $ read_verilog mult_2.v
 _Synthesize Design - this controls which module to synthesize
@@ -213,19 +203,17 @@ $ !gvim mult_2.v
 
 <img width="400" alt="Screenshot (195)" src="https://user-images.githubusercontent.com/93824690/166213003-2cf85b52-fd17-4f12-a404-b86da6d559fb.png">
 
-**_Statistics & abc command return due to absence of standard cell library_**
-
-<img width="641" alt="Screenshot (196)" src="https://user-images.githubusercontent.com/93824690/166213036-a483bd0c-8a76-4701-846c-dbaa416c3d10.png">
 
  ##### No hardware requirements - No # of memories, memory bites, processes and cells. Number of cells inferred is 0.
  
  **_NetList File of Sub-module_**
  
-<img width="200" alt="Screenshot (198)" src="https://user-images.githubusercontent.com/93824690/166213102-cc337c8f-74b0-475e-a622-81a3f3966cec.png">
+![alt](../Day2/spec_mul2nett.png)
 
  **_Realization of Logic_**
  
-<img width="400" alt="Screenshot (197)" src="https://user-images.githubusercontent.com/93824690/166213092-96fdb5cc-2bd2-468b-a347-df2fc90980c5.png">
+![alt](../Day2/special_case.png)
+
 
 ## (ii) mult_8.v
 
@@ -234,17 +222,15 @@ $ !gvim mult_2.v
 <img width="400" alt="Screenshot (194)" src="https://user-images.githubusercontent.com/93824690/166212974-d283029d-43ec-45be-bb02-6769eb3331f9.png">
 <img width="300" alt="Screen Shot 2021-09-04 at 4 19 20 AM" src="https://user-images.githubusercontent.com/89927660/132089537-ea9225f5-00ed-462f-b61e-208a3ae8d25e.png">
 
-**_Statistics _**
 
-<img width="400" alt="Screenshot (199)" src="https://user-images.githubusercontent.com/93824690/166213113-155dc525-71d2-48b5-8608-3f5351254cc5.png">
- 
  **_NetList File of Sub-module_**
  
-<img width="200" alt="Screenshot (202)" src="https://user-images.githubusercontent.com/93824690/166213150-51ca63d3-365e-48f5-b0db-c95ccc0ef7df.png">
+![alt](../Day2/spec_mul9net.png)
+
 
  **_Realization of Logic_**
  
-<img width="400" alt="Screenshot (200)" src="https://user-images.githubusercontent.com/93824690/166213140-c617aa85-8022-4f84-952b-bfa8970438e2.png">
+![alt](../Day2/spec_case.png)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
