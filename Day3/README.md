@@ -85,7 +85,7 @@ $ show
 
 **_Realization of the Logic_**
 
-<img width="641" alt="Screenshot (206)" src="https://user-images.githubusercontent.com/93824690/166224940-a557c7c1-5e43-4dc1-8776-136b8c21aa2a.png">
+![alt](..Day3/opt_check.png)
 
 >_optimized graphical realization thus shows a 2-input AND gate being implemented._
 
@@ -98,7 +98,7 @@ $ show
 
 **_Realization of the Logic_**
 
-<img width="641" alt="Screenshot (208)" src="https://user-images.githubusercontent.com/93824690/166224954-5bc8b24c-a42a-456a-a1c8-e6d77d127ab9.png">
+![alt](..Day3/opt_check2.png)
 
 >_optimized graphical realization thus shows 2-input OR gate being implemented. Although OR gate can be realized using NOR, it can lead to having stacked PMOS configuration which is not a design recommendation. So the OR gate is realized using NAND and NOT gates (which has stacked NMOS configuration)._
 
@@ -110,7 +110,8 @@ $ show
 >_value of y depends on a, y = abc._
 
 **_Realization of the Logic_**
-<img width="641" alt="Screenshot (209)" src="https://user-images.githubusercontent.com/93824690/166224962-c2c38237-33f0-400e-afdf-867eddb8235b.png">
+
+![alt](..Day3/opt_check3.png)
 
 >_optimized graphical realization thus shows 3-input AND gate being implemented._
 
@@ -123,7 +124,7 @@ $ show
 
 **_Realization of the Logic_**
 
-<img width="750" alt="opt check 4" src="https://user-images.githubusercontent.com/93824690/166228436-ed297d9d-c379-41c1-add5-913614b9540e.png">
+![alt](..Day3/opt_check4.png)
 
 >_optimized graphical realization thus shows A XNOR C gate being implemented._
 
@@ -167,15 +168,11 @@ $ show
 
 **_GTK Wave_**
 
-<img width="700" alt="const1 gtkwave" src="https://user-images.githubusercontent.com/93824690/166229663-62940883-a7d8-4948-8500-846e3adba739.png">
-
-**_Statistics showing a flop inferred_**
-
-<img width="400" alt="Screenshot (217)" src="https://user-images.githubusercontent.com/93824690/166231858-6c8328e6-75d7-4c49-b7de-dfa40a785b6c.png">
+![alt](..Day3/dff_const1.png)
 																		  
-**_Realization of Logic_**																	
+**_Realization of Logic_**
 
-<img width="750" alt="Screenshot (216)" src="https://user-images.githubusercontent.com/93824690/166231848-275be7b7-7123-44f9-af20-99045cbaf5bd.png">
+![alt](..Day3/dff_const1_netlist.png)
 
 >_The optimized graphical realization thus shows the flop inferred. Also, the design code has active high reset and the standard cell library has active low reset - so, there is a presence of inverter for the reset._
 
@@ -189,9 +186,6 @@ $ show
 
 <img width="700" alt="const 2 gtk" src= "https://user-images.githubusercontent.com/93824690/166233155-e111c609-f9ca-4241-88e0-784ca36fcd73.png">
 
-**_Statistics showing a flop inferred_**
-
-<img width="400" alt="Screenshot (218)" src="https://user-images.githubusercontent.com/93824690/166231886-062ff0e3-8ae5-44ed-9b5f-1ede18846654.png">
 
 **_Realization of Logic_**
 
