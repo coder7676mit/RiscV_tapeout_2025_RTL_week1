@@ -199,19 +199,14 @@ $ show
 
 **_GTK Wave_**
 
-<img width="700" alt="Screenshot (221)" src="https://user-images.githubusercontent.com/93824690/166231920-517d7982-bef0-4684-995b-36a7431c5192.png">
+![alt](../Day3/dff_const3_gtk.png)
 
-**_Statistics showing a flop inferred_**
-
-<img width="400" alt="const 3 st" src="https://user-images.githubusercontent.com/93824690/166234729-d271f40f-51a9-4f00-a8c6-45b3056db776.png">
-																		  
+											
 **_Realization of Logic_**
 
-<img width="750" alt="Screenshot (223)" src="https://user-images.githubusercontent.com/93824690/166231948-45a94b52-e593-4128-8958-ec4157806351.png">
+![alt](../Day3/dff_const3.png)
 
 
-																		 
-																		 
 #### (iv)dff_const4.v
 
 **_Expected logic from verilog file_**
@@ -220,16 +215,10 @@ $ show
 
 **_GTK Wave_**
 
-<img width="700" alt="const 4 gtk" src="https://user-images.githubusercontent.com/93824690/166235397-a216da63-c9f9-4df5-a583-471885306443.png">
+![alt](../Day3/dff_const4_gtk.png)
 
-**_Statistics showing a flop inferred_**
-
-<img width="400" alt="const4 st" src="https://user-images.githubusercontent.com/93824690/166235523-fa43d8ad-be63-4a55-ba2c-1ea5fee035fb.png">
-
-									
-**_Realization of Logic_**
-
-<img width="400" alt="const4 re" src="https://user-images.githubusercontent.com/93824690/166235601-3dd5590c-f1a1-419c-ac3b-afe660630354.png">
+**_Realization of Logic_**									
+![alt](../Day3/dff_const4.png)
 
 
 #### (v)dff_const5.v
@@ -241,7 +230,7 @@ $ show
 
 **_GTK Wave_**
 
-<img width="700" alt="const 5 gtk" src="https://user-images.githubusercontent.com/93824690/166235800-81062051-7b67-419f-b40a-67b4b7fc6ea3.png">
+![alt](../Day3/dff_const5_gtk.png)
 
 **_Statistics showing a flop inferred_**
 
