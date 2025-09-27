@@ -175,7 +175,7 @@ Let’s synthesize the `good_mux` design using Yosys!
 ![alt text](../Day1/yosys_good_mux_netlist.png)
 
 
-![alt text](../Day1/netlist_description.png)
+![alt text](../Day1/netlist_descrip.png)
 ---
 
 ## 7. Summary
