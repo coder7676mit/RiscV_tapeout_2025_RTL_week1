@@ -13,7 +13,6 @@
 4. [Verilog Code Analysis](#4-verilog-code-analysis)
 5. [Introduction to Yosys & Gate Libraries](#5-introduction-to-yosys--gate-libraries)
 6. [Synthesis Lab with Yosys](#6-synthesis-lab-with-yosys)
-7. [Summary](#7-summary)
 
 ---
 
@@ -177,13 +176,6 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 ![alt text](../Day1/yosys_netlist_summary.png)
 ---
-
-## 7. Summary
-
-- You learned about simulators, designs, and testbenches.
-- You ran your first Verilog simulation with iverilog and visualized waveforms.
-- You analyzed the 2-to-1 mux code.
-- You explored Yosys and learned why gate libraries have various flavors.
 
 
 ---
