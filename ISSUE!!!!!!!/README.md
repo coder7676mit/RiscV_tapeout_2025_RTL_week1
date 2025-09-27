@@ -16,4 +16,4 @@ I am not getting the blocks like buf in yosys netlist schematic. Floowed exactly
 
 ---
 
-![alt](../ISSUE!!!!!!!/solution.png)
+![alt](../ISSUE!!!!!!!/solution2.png)
