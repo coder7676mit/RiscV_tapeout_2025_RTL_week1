@@ -1,6 +1,7 @@
 ## 5. Day 5 - Optimization in synthesis
 
 ### 5.1 If Case constructs
+
 The if statement is a conditional statement which uses boolean conditions to determine which blocks of verilog code to execute. If always translates into Multiplexer. It is used for priority Logic and are always used inside always block.The variable should be assigned as a register.
 
 **_Syntax for IF Statement_**
