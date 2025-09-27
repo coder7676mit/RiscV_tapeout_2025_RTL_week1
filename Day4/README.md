@@ -170,14 +170,14 @@ endmodule
 
 **_Realization of Logic_**
 
-![alt](../Day4/ternary_netlist.png)
+![alt](../Day4/ternary_mux_netlist.png)
 
 >_NAND gate with i1 and sel, inverted io and Or to And invert gate, to which the inputs are sel and inverted i0. The output y is given by the expression = sel'.i0 + sel.i1_
 
 
 **_GLS OUTPUT_**
 
-![alt](../Day4/ternary_gls.png)
+![alt](../Day4/ternary_gls_mux.png)
 
 #### MISSING SENSITIVITY LIST
 
