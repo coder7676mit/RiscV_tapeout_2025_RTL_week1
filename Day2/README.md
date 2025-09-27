@@ -60,10 +60,7 @@ _Writing the netlist in a crisp manner and to view it
 $ write_verilog -noattr multiple_modules_flat.v
 $ !gvim multiple_modules_flat.v
 ```
-**Realization of the Logic**
 
-<img width="750" alt="Screen Shot 2021-09-02 at 6 14 16 PM" src="https://user-images.githubusercontent.com/89927660/131927662-d25c4d37-c0c1-41a7-ab14-9399840eb3ee.png">
-  
  
 **Netlist file**
 
@@ -75,7 +72,7 @@ Sub-module level synthesis is preferred when there are multiple instances of sam
 
 **Statistics of Sub-module**
 
-<img width="300" alt="Screen Shot 2021-09-02 at 9 11 28 PM" src="https://user-images.githubusercontent.com/89927660/131940332-d8272cc3-affb-471d-9dd0-1ad951d86c22.png">
+<img width="300" alt="stats" src="https://user-images.githubusercontent.com/89927660/131940332-d8272cc3-affb-471d-9dd0-1ad951d86c22.png">
 
 
 **NetList File of Sub-module**
