@@ -165,19 +165,19 @@ endmodule
 
 **_GTK Wave_**
 
-![alt](../Day4/ternary_gtk.v)
+![alt](../Day4/ternary_gtk.png)
 
 
 **_Realization of Logic_**
 
-![alt](../Day4/ternary_netlist.v)
+![alt](../Day4/ternary_netlist.png)
 
 >_NAND gate with i1 and sel, inverted io and Or to And invert gate, to which the inputs are sel and inverted i0. The output y is given by the expression = sel'.i0 + sel.i1_
 
 
 **_GLS OUTPUT_**
 
-![alt](../Day4/ternary_gls.v)
+![alt](../Day4/ternary_gls.png)
 
 #### MISSING SENSITIVITY LIST
 
@@ -191,19 +191,19 @@ endmodule
 
 **_GTK Wave_**
 
-![alt](../Day4/bad_mux_gtk.v)
+![alt](../Day4/bad_mux_gtk.png)
 
 
 **_GLS Output_**
 
 
-![alt](../Day4/bad_mux_gls.v)
+![alt](../Day4/bad_mux_gls.png)
 
 
 
 **_Realization of Logic_**
 
-![alt](../Day4/bad_mux_netlist.v)
+![alt](../Day4/bad_mux_netlist.png)
 
 
 >_Confirms the functionality of 2x1 mux after synthesis where when the select is low, activity of input 0 is reflected on y. Similarly, when the select is hight, activity of input 1 is reflected on y. Hence there is a synthesis simulation mismatch due to missing sensitivity list._
@@ -218,23 +218,21 @@ endmodule
 
 >_when the code enters always block, due to the presence of blocking statements, they get evaulated in order. So d gets evaluated first (x.c), where the x results corresponds to the previous iteration's result (a|b). The d value gets updated only in the second statement. The output expression is given as d = (a+b).c_
 
-**_Synthesis Statistics_**
-
-<img width="400" alt="cav st" src="https://user-images.githubusercontent.com/93824690/166254570-e078ddec-8f95-4aba-ac01-4d552eb742a3.png">
 
 **_GTK Wave_**
 
-<img width="700" alt="cav gtk" src="https://user-images.githubusercontent.com/93824690/166254577-420c3b5f-2e2e-43ba-a670-f41a828e0e75.png">
+![alt](../Day4/blocking_caveat_gtk.png)
+
 
 >_d = (a+b).c, if the inputs a,b = 0; then a+b = 0. The output d = 0. But, we observe the output d = 1 because it looks at the past value where a+b was 1._
 
 **_GLS Output_**
 
-<img width="700" alt="cav gls" src="https://user-images.githubusercontent.com/93824690/166254673-5b2ff6aa-4aea-4ca1-bb06-28079dc50910.png">
+![alt](../Day4/blocking_caveat_gls.png)
 
 **_Realization of Logic_**
 
-<img width="750" alt="cav re" src="https://user-images.githubusercontent.com/93824690/166254689-2095c677-6fe6-4264-b840-880b8017675b.png">
+![alt](../Day4/blocking_caveat_netlist.png)
 
 <_value of output d is 0 after simulation and 1 after synthesis for the same set of input values. Hence there is a synthesis simulation mismatch due to blocking assignments._
 
