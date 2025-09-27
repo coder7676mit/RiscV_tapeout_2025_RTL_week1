@@ -84,7 +84,7 @@ $ show
 
 **_Realization of the Logic_**
 
-![alt](..Day3/opt_check.png)
+![alt](../Day3/opt_check.png)
 
 >_optimized graphical realization thus shows a 2-input AND gate being implemented._
 
@@ -97,7 +97,7 @@ $ show
 
 **_Realization of the Logic_**
 
-![alt](..Day3/opt_check2.png)
+![alt](../Day3/opt_check2.png)
 
 >_optimized graphical realization thus shows 2-input OR gate being implemented. Although OR gate can be realized using NOR, it can lead to having stacked PMOS configuration which is not a design recommendation. So the OR gate is realized using NAND and NOT gates (which has stacked NMOS configuration)._
 
@@ -110,7 +110,7 @@ $ show
 
 **_Realization of the Logic_**
 
-![alt](..Day3/opt_check3.png)
+![alt](../Day3/opt_check3.png)
 
 >_optimized graphical realization thus shows 3-input AND gate being implemented._
 
@@ -123,7 +123,7 @@ $ show
 
 **_Realization of the Logic_**
 
-![alt](..Day3/opt_check4.png)
+![alt](../Day3/opt_check4.png)
 
 >_optimized graphical realization thus shows A XNOR C gate being implemented._
 
@@ -167,11 +167,11 @@ $ show
 
 **_GTK Wave_**
 
-![alt](..Day3/dff_const1.png)
+![alt](../Day3/dff_const1_gtkwave.png)
 																		  
 **_Realization of Logic_**
 
-![alt](..Day3/dff_const1_netlist.png)
+![alt](../Day3/dff_const1.png)
 
 >_The optimized graphical realization thus shows the flop inferred. Also, the design code has active high reset and the standard cell library has active low reset - so, there is a presence of inverter for the reset._
 
@@ -183,12 +183,12 @@ $ show
 
 **_GTK Wave_**
 
-<img width="700" alt="const 2 gtk" src= "https://user-images.githubusercontent.com/93824690/166233155-e111c609-f9ca-4241-88e0-784ca36fcd73.png">
+![alt](../Day3/dff_const2_gtkwave.png)
 
 
 **_Realization of Logic_**
 
-<img width="400" alt="Screenshot (219)" src="https://user-images.githubusercontent.com/93824690/166231903-de4a3bdd-362c-4b62-8d7f-4c882dac6b3c.png">
+![alt](../Day3/dff_const2.png)
 
 #### (iii)dff_const3.v
 
