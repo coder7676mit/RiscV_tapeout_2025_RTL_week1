@@ -128,7 +128,7 @@ $ gtkwave tb_dff_asyncres.vcd
 ```
 **GTK WAVE OF ASYNCHRONOUS RESET**
 
-![alt](../Day2/async_rst_gtk.png)
+![alt](../Day2/asyn_rst_gtk.png)
 
 #### FLIP FLOP SYNTHESIS
 
