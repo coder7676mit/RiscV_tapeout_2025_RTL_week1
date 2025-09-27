@@ -258,9 +258,7 @@ $ show
 
 **_Expected logic from verilog file_**
 
-<img width="400" alt="count opt mo" src="https://user-images.githubusercontent.com/93824690/166236838-2e8bf699-50bd-45c8-ba09-0d24c8dc8a70.png">
-
-<img width="400" alt="count opt fig" src="https://user-images.githubusercontent.com/93824690/166236846-da9c5ae1-64cd-4db4-bec4-91551f122cdb.png">
+![alt](../Day3/unused_opt_code.png)
 
 >_If there is a reset, the counter is intialised to 0, else it is incremented - performing like an upcounter. Since it is a 3 bit signal, the counter rolls back after 7. However, the final output q is sensing only the count [0], so the bit is toggling in every clock cycle (000, 001, 010 ...111). The other two outputs are unused and does not create any output dependency. Hence, these unused outpus need not be present in the design._
 
