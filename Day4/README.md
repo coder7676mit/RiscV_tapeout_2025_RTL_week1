@@ -165,19 +165,19 @@ endmodule
 
 **_GTK Wave_**
 
-![alt](../Day/ternary_gtk.v)
+![alt](../Day4/ternary_gtk.v)
 
 
 **_Realization of Logic_**
 
-![alt](../Day/ternary_netlist.v)
+![alt](../Day4/ternary_netlist.v)
 
 >_NAND gate with i1 and sel, inverted io and Or to And invert gate, to which the inputs are sel and inverted i0. The output y is given by the expression = sel'.i0 + sel.i1_
 
 
 **_GLS OUTPUT_**
 
-![alt](../Day/ternary_gls.v)
+![alt](../Day4/ternary_gls.v)
 
 #### MISSING SENSITIVITY LIST
 
@@ -191,21 +191,20 @@ endmodule
 
 **_GTK Wave_**
 
-<img width="700" alt="bad gtk" src="https://user-images.githubusercontent.com/93824690/166253027-c182567f-82ff-483a-af77-aabdf6e1d2cd.png">
+![alt](../Day4/bad_mux_gtk.v)
 
-**_Synthesis Statistics_**
-
-<img width="400" alt="bad st" src="https://user-images.githubusercontent.com/93824690/166253012-6caad5c4-e707-454b-b2f8-d5f1f58885cd.png">
 
 **_GLS Output_**
 
 
-<img width="700" alt="bad gls" src="https://user-images.githubusercontent.com/93824690/166253052-a961d8b0-dc45-4b4a-a90e-ff5409fa0448.png">
+![alt](../Day4/bad_mux_gls.v)
+
 
 
 **_Realization of Logic_**
 
-<img width="641" alt="Screenshot (241)" src="https://user-images.githubusercontent.com/93824690/166253100-20d54e2c-58b6-479c-bb7a-296833f7d4ee.png">
+![alt](../Day4/bad_mux_netlist.v)
+
 
 >_Confirms the functionality of 2x1 mux after synthesis where when the select is low, activity of input 0 is reflected on y. Similarly, when the select is hight, activity of input 1 is reflected on y. Hence there is a synthesis simulation mismatch due to missing sensitivity list._
 
