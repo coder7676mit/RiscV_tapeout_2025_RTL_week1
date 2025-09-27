@@ -106,10 +106,10 @@ end
 >_Else case is missing so there will be a D latch._
 
 **_Synthesis Statistics_**																		  
-![alt](Day5/incomp_if_latch.png)
+![alt](../Day5/incomp_if_latch.png)
 
 **_Realization of Logic_**
-![alt](Day5/incomp_if_netl.png)
+![alt](../Day5/incomp_if_netl.png)
 
 >_synthesized design has a D Latch inferred due to incomplete if structure (missing else statement)._
 
@@ -121,17 +121,17 @@ end
 
 **_GTK Wave_**
 
-![alt](Day5/incmp_if2_gtk.png)
+![alt](../Day5/incmp_if2_gtk.png)
 
 >_When i0 is high, the output follows i1. When i0 is low, the output latches to a constant value (when both i0 and i2 are 0). Presence of inferred latches due to incomplete if structure._
 
 **_Synthesis Statistics_**
 
-![alt](Day5/incomp_if2_latch.png)
+![alt](../Day5/incomp_if2_latch.png)
 
 **_Realization of Logic_**
 
-![alt](Day5/incomp_if2_netlist.png)
+![alt](../Day5/incomp_if2_netlist.png)
 
 
 ### 5.2 INCOMPLETE CASE STATEMENTS
@@ -142,17 +142,17 @@ end
 <img width="641" alt="33" src="https://user-images.githubusercontent.com/93824690/166265632-97eb0312-e58f-40e6-9f26-fa6b54abb8ca.png">
 
 **_GTK Wave_**
-![alt](Day5/incomp_case_gtk.png)
+![alt](../Day5/incomp_case_gtk.png)
 
 >_When select signal is 00, the output follows i0 and is i1 when the select value is 01. Since the output is undefined for 10 and 11 values, the ouput latches to the previously available value._
 
 **_Synthesis Statistics_**
 
-![alt](Day5/incomp_case_latch.png)
+![alt](../Day5/incomp_case_latch.png)
 
 **_Realization of Logic_**
 
-![alt](Day5/incomp_case_netlist.png)
+![alt](../Day5/incomp_case_netlist.png)
 
 >_The synthesized design has a D Latch inferred due to incomplete case structure (missing output definition for 2 of the select statements)._
 
@@ -164,16 +164,16 @@ end
 
 **_Synthesis Statistics_**
 
-![alt](Day5/comp_case_nolatch.png)
+![alt](../Day5/comp_case_nolatch.png)
 
 **_GTK Wave_**
 
-![alt](Day5/comp_case_gtk.png)
+![alt](../Day5/comp_case_gtk.png)
 
 >_When select signal is 00, the output follows i0 and is i1 when the select value is 01. Since the output is undefined for 10 and 11 values, the presence of default sets the output to i2 when the select line is 10 or 11. The ouput will not latch and be a proper combinational circuit._
 **_Realization of Logic_**
 
-![alt](Day5/comp_case_netlist.png)
+![alt](../Day5/comp_case_netlist.png)
 
 #### CASE 3: partial case statement
 **_Verilog File_**
@@ -182,11 +182,11 @@ end
 
 **_Synthesis Statistics_**
 
-![alt](Day5/partial_case_latch.png)
+![alt](../Day5/partial_case_latch.png)
 
 **_Realization of Logic_**
 
-![alt](Day5/partial_case_netlist.png)
+![alt](../Day5/partial_case_netlist.png)
 
 #### CASE 4: Overlapping case
 
@@ -276,5 +276,5 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_GLS Output_**
 
-![alt]../(Day5/rca_gtk.png)
+![alt](../Day5/rca_gtk.png)
 
