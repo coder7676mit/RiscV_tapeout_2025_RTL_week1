@@ -224,7 +224,7 @@ _Understanding the Usage of For and Generate Statements:_
 
 **_Synthesis Statistics_**
 
-![alt](../Day5/mux_generate_netlist_latch.png)
+![alt](../Day5/mux_genrate_netlist_latch.png)
 
 **_GLS_**
 
