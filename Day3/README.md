@@ -199,7 +199,7 @@ $ show
 
 **_GTK Wave_**
 
-![alt](../Day3/dff_const3_gtk.png)
+![alt](../Day3/df_const3_gtk.png)
 
 											
 **_Realization of Logic_**
@@ -271,7 +271,7 @@ $ show
 
 **_Realization of Logic_**
 
-<img width="750" alt="Screenshot (229)" src="https://user-images.githubusercontent.com/93824690/166236989-56da54ff-5a25-4e0d-8739-a7f1e1c2a004.png">
+![alt](../Day3/unused_opt_counter.png)
 
 >_optimized graphical realization output Q (count0) being fed to NOT gate so as to perform the toggle function. The other outputs which has no dependency on the primary out is optimized off._
 
