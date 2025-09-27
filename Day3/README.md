@@ -55,16 +55,22 @@ y = a xor c
 ```
 //to view all optimization files
 $ ls *opt_check*
+
 //Invoke Yosys
 $ yosys
+
 //Read library 
 $ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
 //Read Design
 $ read_verilog opt_check.v
+
 //Synthesize Design - this controls which module to synthesize
 $ synth -top opt_check
+
 //To perform constant propogation optimization
 $ opt_clean -purge
+
 //Generate Netlist
 $ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 //Realizing Graphical Version of Logic for single modules
@@ -132,8 +138,10 @@ $ show
 ```
 //To view all optimization files
 $ ls *df*const*
+
 //To open multiple files 
 $ dff_const1.v -o dff_const2.v
+
 //Performing Simulation
 //Load the design in iVerilog by giving the verilog and testbench file names
 $ iverilog dff_const1.v tb_dff_const1.v 
@@ -141,14 +149,17 @@ $ iverilog dff_const1.v tb_dff_const1.v
 $ ./a.out
 //To load the VCD file in GTKwaveform
 $ gtkwave tb_dff_const1.vcd
+
 //Performing Synthesis
 //Invoke Yosys 
 $ yosys
 //Read library 
 $ read_liberty -lib ../lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
+
 //Read Design
 $ read_verilog dff_const1.v
 //Synthesize Design - this controls which module to synthesize
+
 $ synth -top dff_const1
 //There will be a separate flop library under a standard library
 //so we need to tell the design where to specifically pick up the DFF
