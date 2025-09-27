@@ -165,22 +165,19 @@ endmodule
 
 **_GTK Wave_**
 
-<img width="641" alt="Screenshot (237)" src="https://user-images.githubusercontent.com/93824690/166249367-e4b5567f-f683-4a5e-89fb-b875ad6eeaf4.png">
+![alt](../Day/ternary_gtk.v)
 
-**_Statistics_**
-
-<img width="400" alt="ter st" src="https://user-images.githubusercontent.com/93824690/166249983-99797adb-801c-43d4-983d-4c8154f34cbd.png">
 
 **_Realization of Logic_**
 
-<img width="641" alt="Screenshot (238)" src="https://user-images.githubusercontent.com/93824690/166249396-10ea2950-f074-4f53-b8e1-296fea18491d.png">
+![alt](../Day/ternary_netlist.v)
 
 >_NAND gate with i1 and sel, inverted io and Or to And invert gate, to which the inputs are sel and inverted i0. The output y is given by the expression = sel'.i0 + sel.i1_
 
 
 **_GLS OUTPUT_**
 
-<img width="700" alt="gls gtk" src="https://user-images.githubusercontent.com/93824690/166250831-c7b446ef-d96e-46a0-893c-edf6e9780d30.png">
+![alt](../Day/ternary_gls.v)
 
 #### MISSING SENSITIVITY LIST
 
