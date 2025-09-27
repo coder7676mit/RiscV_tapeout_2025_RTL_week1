@@ -2,7 +2,7 @@
 ### 2.1. Introduction to timing labs
 ```
 __Command to open the libary file
-$ gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 __To shut off the background colors/ syntax off:
 : syn off
 __To enable the line numbers
@@ -28,13 +28,13 @@ $ gvim multiple_modules.v
 _Invoke Yosys
 $ yosys
 _Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Read Design
 $ read_verilog multiple_modules.v
 _Synthesize Design
 $ synth -top multiple_modules
 _Generate Netlist
-$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__t_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__t_025C_1v80.lib
 _Realizing Graphical Version of Logic for multiple modules
 $ show multiple_modules
 _Writing the netlist in a crisp manner 
@@ -136,16 +136,16 @@ $ gtkwave tb_dff_asyncres.vcd
 _Invoke Yosys
 $ yosys
 _Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Read Design
 $ read_verilog dff_asyncres.v
 _Synthesize Design - this controls which module to synthesize
 $ synth -top dff_asyncres
 _There will be a separate flop library under a standard library
 _But here we point back to the same library and tool looks only for DFF instead of all cells
-$ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Generate Netlist
-$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Realizing Graphical Version of Logic for single modules
 $ show 
 _Writing the netlist in a crisp manner 
@@ -184,13 +184,13 @@ $ gvim mult_*.v -o
 _Invoke Yosys
 $ yosys
 _Read library 
-$ read_liberty -lib ..lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Read Design
 $ read_verilog mult_2.v
 _Synthesize Design - this controls which module to synthesize
 $ synth -top mul2
 _Generate Netlist
-$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 _Realizing Graphical Version of Logic for single modules
 $ show 
 _Writing the netlist in a crisp manner 
