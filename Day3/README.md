@@ -232,15 +232,6 @@ $ show
 
 ![alt](../Day3/dff_const5_gtk.png)
 
-**_Statistics showing a flop inferred_**
-
-<img width="400" alt="const5 st" src="https://user-images.githubusercontent.com/93824690/166235889-7fe5effa-676a-44a9-9acd-b829fe01816f.png">
-
-						
-**_Realization of Logic_**
-
-<img width="750" alt="const 5 re" src="https://user-images.githubusercontent.com/93824690/166235967-b31ef6b1-dbb0-4cd7-8705-78bb3c4b8d20.png">
-
 
 #### SEQUENTIAL UNUSED OUTPUT OPTIMIZATION
 ```
