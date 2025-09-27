@@ -58,7 +58,7 @@ $ ls *opt_check*
 //Invoke Yosys
 $ yosys
 //Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 //Read Design
 $ read_verilog opt_check.v
 //Synthesize Design - this controls which module to synthesize
@@ -66,7 +66,7 @@ $ synth -top opt_check
 //To perform constant propogation optimization
 $ opt_clean -purge
 //Generate Netlist
-$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 //Realizing Graphical Version of Logic for single modules
 $ show 
 ```
@@ -145,7 +145,7 @@ $ gtkwave tb_dff_const1.vcd
 //Invoke Yosys 
 $ yosys
 //Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
 //Read Design
 $ read_verilog dff_const1.v
 //Synthesize Design - this controls which module to synthesize
@@ -153,7 +153,7 @@ $ synth -top dff_const1
 //There will be a separate flop library under a standard library
 //so we need to tell the design where to specifically pick up the DFF
 //But here we point back to the same library and tool looks only for DFF instead of all cells
-$ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
+$ dfflibmap -liberty ../lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
 //Generate Netlist
 $ abc -liberty ../my_lib/lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
 //Realizing Graphical Version of Logic for single modules
@@ -241,7 +241,7 @@ $ gvim counter_opt.v
 //Invoke Yosys
 $ yosys
 //Read library 
-$ read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 //Read Design
 $ read_verilog opt_check.v
 //Synthesize Design - this controls which module to synthesize
@@ -249,7 +249,7 @@ $ synth -top opt_check
 //To perform constant propogation optimization
 $ opt_clean -purge
 //Generate Netlist
-$ abc -liberty ../my_lib/lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
+$ abc -liberty ../lib/sky130_fd_sc_hd_-tt_025C_1v80.lib
 //Realizing Graphical Version of Logic for single modules
 $ show 
 ```
@@ -294,9 +294,4 @@ $ gvim counter_opt2.v
 
 <img width="400" alt="co 2 st" src="https://user-images.githubusercontent.com/93824690/166238350-4589b69e-c10b-4b1f-bf56-495866548718.png">
 
-**_Realization of Logic_**
-
-<img width="750" alt="Screenshot (230)" src="https://user-images.githubusercontent.com/93824690/166237000-29183be5-d656-4900-ab10-107cbf57ed21.png">
-
->_All three flops can be seen. There is a need for incremental logic, so the logic other than flops represent the adder circuit. The expression at the output is 
-q = counter2.counter1'.counter0'. Therefore, the outputs having no direct role on the primary output will only be optimized away._
+----
